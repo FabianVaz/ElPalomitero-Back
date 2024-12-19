@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
   const [user, setUser] = useState(null);
@@ -10,11 +10,6 @@ const Header = () => {
     }
   }, []);
 
-  const handleLogout = () => {
-    localStorage.removeItem('user');
-    setUser(null);
-    window.location.reload(); // Refrescar la página para actualizar el estado
-  };
 
   return (
     <header className="bg-danger d-flex justify-content-between align-items-center px-4 py-2">

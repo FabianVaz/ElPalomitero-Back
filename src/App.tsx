@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MovieHomePage from './pages/Home';
 import Login from './pages/Login';
 import MovieDetail from './pages/MovieDetail';
@@ -11,11 +11,6 @@ import ExploreMovies from './pages/ExploreMovies';
 
 
 const App = () => {
-  // Simulación de autenticación (esto se puede reemplazar con un contexto o Redux)
-  const isAuthenticated = () => {
-    const token = localStorage.getItem('token');
-    return !!token;
-  };
 
   return (
     <Router>

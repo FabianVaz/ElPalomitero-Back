@@ -10,6 +10,7 @@ const Register = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const navigate = useNavigate();
+  
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,7 +26,7 @@ const Register = () => {
         email,
         password,
       });
-
+      console.log(data);
       // Mostrar mensaje de éxito y redirigir después de 2 segundos
       setSuccess('Registro exitoso. Redirigiendo...');
       setTimeout(() => {

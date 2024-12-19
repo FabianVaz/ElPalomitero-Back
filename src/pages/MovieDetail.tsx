@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Html5QrcodeScanner } from "html5-qrcode";
@@ -64,7 +64,8 @@ const MovieDetail = () => {
       const scanner = new Html5QrcodeScanner("qr-reader", {
         fps: 10,
         qrbox: 250,
-      });
+      },false
+    );
 
       scanner.render(
         (decodedText) => {

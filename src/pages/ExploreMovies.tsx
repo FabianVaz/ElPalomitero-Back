@@ -2,6 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+interface Movie {
+  id: number;
+  title: string;
+  poster_path: string;
+  overview: string;
+  release_date: string;
+  vote_average: number;
+  vote_count: number;
+}
+
+
 const ExploreMovies = () => {
   const [movies, setMovies] = useState([]);
   const [activeTab, setActiveTab] = useState("Mejor Calificadas");
@@ -78,7 +89,7 @@ const ExploreMovies = () => {
         <h2 className="text-center">{activeTab}</h2>
         <div className="row">
           {movies.length > 0 ? (
-            movies.map((movie) => (
+            movies.map((movie:Movie) => (
               <div
                 key={movie.id}
                 className="col-6 col-md-3 mb-3"

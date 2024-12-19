@@ -29,7 +29,7 @@ const Login = () => {
       navigate('/');
     } catch (err) {
       console.error('Error en el inicio de sesión:', err);
-      setError(err.response?.data?.error || 'Error desconocido.');
+      setError('Error desconocido.');
     }
   };
 

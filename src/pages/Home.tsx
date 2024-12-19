@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
+import { Movie } from '../services/api';
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
@@ -71,7 +72,7 @@ export default function Home() {
             </button>
           </div>
           <div className="row">
-            {movies.map((movie) => (
+            {movies.map((movie:Movie) => (
               <div key={movie.id} className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
                 <img
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}

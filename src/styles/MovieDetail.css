@@ -1,0 +1,27 @@
+.movie-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .movie-poster {
+    max-width: 300px;
+    border-radius: 10px;
+  }
+  
+  .movie-info {
+    text-align: center;
+  }
+  
+  .reviews {
+    margin-top: 2rem;
+  }
+  
+  .review {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  

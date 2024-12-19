@@ -1,0 +1,116 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+  }
+  
+  .homepage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+  }
+  
+  .homepage-header {
+    background-color: #ff0055;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .homepage-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .homepage-subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #fff;
+  }
+  
+  .homepage-content {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .movie-card {
+    background-color: #1c1c1c;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .movie-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .movie-poster {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .movie-title {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .movie-rating {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+  }
+  
+  .rating-star {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: #fff;
+  }
+  
+  .filled-star {
+    fill: #ffcc00; /* Estrellas llenas amarillas */
+  }
+  
+  .empty-star {
+    stroke: #fff; /* Estrellas vacías blancas */
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  footer {
+    color: #aaa;
+  }
+  /* Home.css */
+.movie-poster {
+  transition: transform 0.2s ease-in-out;
+}
+
+.movie-poster:hover {
+  transform: scale(1.05);
+}

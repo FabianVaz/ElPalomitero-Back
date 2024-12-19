@@ -8,7 +8,7 @@ export interface Movie {
 }
 
 const API = axios.create({
-  baseURL: 'http://localhost:3000', // Cambia según tu servidor
+  baseURL: import.meta.env.VITE_BACKEND_URL, // Cambia según tu servidor
 });
 
 export const fetchPopularMovies = async (): Promise<Movie[]> => {

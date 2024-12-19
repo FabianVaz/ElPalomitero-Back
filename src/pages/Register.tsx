@@ -20,7 +20,7 @@ const Register = () => {
     }
 
     try {
-      const { data } = await axios.post('http://localhost:3000/users/register', {
+      const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/users/register`, {
         name,
         email,
         password,

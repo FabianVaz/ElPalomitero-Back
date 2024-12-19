@@ -7,6 +7,7 @@ interface Review {
   movieName: string;
   rating: number;
   posterPath: string;
+  content: string;
 }
 
 const Profile = () => {
@@ -21,7 +22,7 @@ const Profile = () => {
 
       // Fetch reviews
       axios
-        .get(`http://localhost:3000/reviews/user/${parsedUser.id}`)
+        .get(`${import.meta.env.VITE_BACKEND_URL}/reviews/user/${parsedUser.id}`)
         .then((response) => {
           setReviews(response.data.slice(0, 3)); // Mostrar solo las últimas 3 reseñas
         })
@@ -71,12 +72,13 @@ const Profile = () => {
                 <div className="text-warning">
                   {"★".repeat(review.rating)}
                   {"☆".repeat(5 - review.rating)}
+                  <p className="mb-0">{review.content}</p>
                 </div>
               </div>
             </div>
           ))
         ) : (
-          <p className="text-muted">No tienes reseñas todavía.</p>
+          <p className="no-reviews">No tienes reseñas todavía.</p>
         )}
       </div>
       <div className="mt-auto">

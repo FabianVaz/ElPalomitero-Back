@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
   
     try {
-      const { data } = await axios.post('http://localhost:3000/users/login', {
+      const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/users/login`, {
         email,
         password,
       });

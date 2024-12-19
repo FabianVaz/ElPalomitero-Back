@@ -9,11 +9,12 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
 
+
   // Obtener las películas populares
   useEffect(() => {
     const fetchPopularMovies = async () => {
       try {
-        const { data } = await axios.get('http://localhost:3000/movies/popular');
+        const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/movies/popular`);
         setMovies(data);
       } catch (error) {
         console.error('Error fetching movies:', error);
@@ -27,7 +28,7 @@ export default function Home() {
   const handleSearch = async () => {
     if (!searchTerm.trim()) return;
     try {
-      const { data } = await axios.get('http://localhost:3000/movies/search', {
+      const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/movies/search`, {
         params: { query: searchTerm },
       });
       setMovies(data);

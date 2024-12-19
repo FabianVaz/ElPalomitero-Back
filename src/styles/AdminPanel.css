@@ -1,0 +1,16 @@
+.admin-panel {
+    background-color: #f8f9fa; /* Fondo claro */
+  }
+  
+  .stat-card {
+    border: 1px solid #dee2e6;
+  }
+  
+  .stat-card h3 {
+    color: #6c757d;
+  }
+  
+  .stat-card p {
+    color: #212529;
+  }
+  

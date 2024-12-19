@@ -84,7 +84,7 @@ const Review = () => {
 
       console.log("Datos a enviar:", reviewData);
 
-      await axios.post("http://localhost:3000/reviews", reviewData);
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/reviews`, reviewData);
       alert("Reseña publicada exitosamente.");
       navigate(`/movie/${id}`);
     } catch (error) {

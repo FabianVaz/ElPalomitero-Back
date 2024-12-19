@@ -48,3 +48,8 @@
   align-items: center;
 }
 
+.no-reviews {
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}

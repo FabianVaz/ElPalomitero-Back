@@ -47,7 +47,7 @@ const MovieDetail = () => {
   const fetchReviews = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/reviews/${id}`
+        `${import.meta.env.VITE_BACKEND_URL}/reviews/${id}`
       );
       setReviews(data);
     } catch (error) {
@@ -133,7 +133,7 @@ const MovieDetail = () => {
               </div>
             ))
           ) : (
-            <p className="text-muted">
+            <p className="no-reviews">
               Esta película aún no tiene reseñas. ¡Sé el primero en escribir
               una!
             </p>

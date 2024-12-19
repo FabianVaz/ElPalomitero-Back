@@ -4,7 +4,7 @@ import Login from './pages/Login';
 import MovieDetail from './pages/MovieDetail';
 import Review from './pages/Review';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import AdminPanel from './pages/AdminPanel';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
 import ExploreMovies from './pages/ExploreMovies';
@@ -21,6 +21,8 @@ const App = () => {
     <Router>
       <Navbar />
       <Routes>
+        {/* Ruta de dashboard */}
+        <Route path='/admin' element={<AdminPanel />} />
         {/* Ruta de inicio */}
         <Route path="/" element={<MovieHomePage />} />
         {/* Ruta de registro de usuarios*/}
@@ -41,7 +43,6 @@ const App = () => {
         {/* Ruta para errores 404 */}
         <Route path="*" element={<h1>Página no encontrada (404)</h1>} />
       </Routes>
-      <Footer />
     </Router>
   );
 };

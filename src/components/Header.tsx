@@ -24,9 +24,7 @@ const Header = () => {
       <div>
         {user ? (
           <div className="d-flex align-items-center">
-            <button className="btn btn-dark" onClick={handleLogout}>
-              Cerrar Sesión
-            </button>
+            
           </div>
         ) : (
           <>
